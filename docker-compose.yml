@@ -5,7 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8000:80
+      - "8000:80"
+    environment:
+      - APP_KEY=base64:HoLwP4bDybI0dWAaaTW6N0PjLtUzXQoZSnCHe1lGzQ0=
     volumes:
       - .:/var/www/html
     depends_on:
@@ -15,7 +17,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: customer_management
       MYSQL_USER: root
       MYSQL_PASSWORD:
