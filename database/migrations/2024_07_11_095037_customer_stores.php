@@ -9,21 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-
-        Schema::create('customer_stores', function (Blueprint $table) {
-            $table->integerIncrements('id')->primary();
+        Schema::create('customers', function (Blueprint $table) {
+            $table->id();
             $table->string('title');
             $table->string('name');
             $table->string('gender');
             $table->string('phone_number');
             $table->string('image');
-            $table->string('email');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->string('email')->unique();
+            $table->timestamps();
         });
-
     }
 
     /**
