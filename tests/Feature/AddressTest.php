@@ -48,6 +48,6 @@ class AddressTest extends TestCase
     {
         $address = Address::factory()->create();
         $response = $this->delete('/api/address/' . $address->id);
-        $response->assertJson(['message' => 'Address deleted'])->assertStatus(200);
+        $response->assertJson(['message' => 'Address deleted successfully'])->assertStatus(200);
     }
 }

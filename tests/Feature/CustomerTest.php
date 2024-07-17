@@ -64,6 +64,6 @@ class CustomerTest extends TestCase
     {
         $customer = Customer::factory()->create();
         $response = $this->delete('/api/customer/' . $customer->id);
-        $response->assertJson(['message' => 'Customer deleted'])->assertStatus(200);
+        $response->assertJson(['message' => 'Customer deleted successfully'])->assertStatus(200);
     }
 }
