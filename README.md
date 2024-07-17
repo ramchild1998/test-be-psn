@@ -5,7 +5,9 @@ Database MySQL
 
 1. git clone https://github.com/ramchild1998/test-be-psn.git by terminal
 2. run "npm i" and "composer i" by terminal
-3. run php artisan key:generate
+3. run "php artisan key:generate"
+4. run "docker-compose up -d"
+5. check browser "http://localhost:8000" or "http://127.0.0.1:8000"
 
 
 # Customer Store API
